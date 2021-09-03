@@ -61,7 +61,7 @@ def save(network, step, bucket, path, mp, aux=None, keep_n=3, delete_old=True):
         # create metadata file
         with open(f"gs://{bucket}/{path}/meta.json", "w") as f:
             json.dump({
-                "step": 0,
+                "step": 1,
                 "checkpoints": [],
                 "aux": {}
             }, f)
