@@ -83,6 +83,7 @@ def read_shard(ckpt_dir):
     out = []
     for idx in range(16):
         file_path = ckpt_dir + f"{idx}.npz"
+        print(file_path)
         with open(file_path, "rb") as f:
             buf = f.read()
             f_io = io.BytesIO(buf)
