@@ -47,6 +47,8 @@ class TFRecordLoader:
             print(file)
             file = file.prefetch(10)
             print(file)
+            
+            print(enumerate(file))
 
             for file_idx, data in enumerate(file):
                 data = jax.tree_map(lambda x: x.numpy(), data)
