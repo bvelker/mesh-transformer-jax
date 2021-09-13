@@ -1,1 +1,2 @@
-./housefile_content/housefile-contents_8.tfrecords
+gs://mesh-transformer-jax/housefile_content/housefile-contents_8_1.tfrecords
+gs://mesh-transformer-jax/housefile_content/housefile-contents_8_3.tfrecords
