@@ -12,33 +12,30 @@
   "per_replica_batch": 1,
   "gradient_accumulation_steps": 16,
 
-  "warmup_steps": 3000,
-  "anneal_steps": 300000,
-  "lr": 1.2e-4,
-  "end_lr": 1.2e-5,
+  "warmup_steps": 4,
+  "anneal_steps": 50,
+  "lr": 1.2e-5,
+  "end_lr": 1.2e-6,
   "weight_decay": 0.1,
-  "total_steps": 350000,
+  "total_steps": 54,
 
   "tpu_size": 8,
 
   "bucket": "gptj-testing",
-  "model_dir": "mesh_jax_pile_6B_rotary",
+  "model_dir": "gptj-testing",
 
   "train_set": "housefile_content_emails-subjectlines.train.index",
-  "val_set": {
-    "pile": "housefile_content_emails-subjectlines.val.index",
-    "owt": "openwebtext2_new_inputs.val.index"
-  },
+  "val_set": "housefile_content_emails-subjectlines.val.index",
   
   "eval_harness_tasks": [
   ],
 
-  "val_batches": 100,
+  "val_batches": 1722,
   "val_every": 500,
   "ckpt_every": 500,
-  "keep_every": 10000,
+  "keep_every": 1500,
 
   "name": "large_housefile_content_emails-subjectlines",
   "wandb_project": "mesh-transformer-jax",
-  "comment": ""
+  "comment": "please work!"
 }
