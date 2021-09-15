@@ -25,7 +25,9 @@
   "model_dir": "gptj-testing",
 
   "train_set": "housefile_content_emails-subjectlines.train.index",
-  "val_set": "housefile_content_emails-subjectlines.val.index",
+  "val_set": {
+    "emails": "housefile_content_emails-subjectlines.val.index"
+  },
   
   "eval_harness_tasks": [
   ],
