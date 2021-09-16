@@ -42,13 +42,13 @@ class TFRecordLoader:
             compression = "ZLIB" if "zstd" in i else ""
 
             file = tf.data.TFRecordDataset(i, compression_type=compression).map(self.parse_fn, num_parallel_calls=tf.data.AUTOTUNE)
-            print(file)
-            file = file.apply(tf.data.experimental.dense_to_ragged_batch(np.prod(self.bs), drop_remainder=True))
-            print(file)
-            file = file.prefetch(10)
-            print(file)
             
-            print(enumerate(file))
+            file = file.apply(tf.data.experimental.dense_to_ragged_batch(np.prod(self.bs), drop_remainder=True))
+            
+            file = file.prefetch(10)
+            #print(file)
+            
+            #print("Index in sample_once = " + str(i))
 
             for file_idx, data in enumerate(file):
                 data = jax.tree_map(lambda x: x.numpy(), data)
@@ -154,7 +154,7 @@ if __name__ == "__main__":
     #     print(i)
     #     break
 
-    d = TFRecordWIT("data/wit_dalle.train.index", (8, 32))
+    d = TFRecordWIT("data/housefile_content_emails-subjectlines.train.index", (8, 32))
     for idx, i in enumerate(d.sample_once()):
         print(i)
         break
