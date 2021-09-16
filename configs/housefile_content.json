@@ -22,7 +22,7 @@
   "tpu_size": 8,
 
   "bucket": "gptj-testing",
-  "model_dir": "gptj-testing",
+  "model_dir": "newModel",
 
   "train_set": "housefile_content_emails-subjectlines.train.index",
   "val_set": {
@@ -37,7 +37,7 @@
   "ckpt_every": 500,
   "keep_every": 1500,
 
-  "name": "large_housefile_content_emails-subjectlines",
-  "wandb_project": "mesh-transformer-jax",
+  "name": "1st_run",
+  "wandb_project": "large_housefile_content_emails-subjectlines",
   "comment": "please work!"
 }
