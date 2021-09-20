@@ -66,11 +66,12 @@ class TFRecordLoader:
 
     # this loops infinitely, use .sample_once to get an iterator for validation
     def get_samples(self):
-        try:
-            return next(self.sample_fn)
-        except StopIteration:
-            self.reset()
-            return self.get_samples()
+        return next(self.sample_fn)
+        #try:
+        #    return next(self.sample_fn)
+        #except StopIteration:
+        #    self.reset()
+        #    return self.get_samples()
 
     def get_state(self):
         return {
