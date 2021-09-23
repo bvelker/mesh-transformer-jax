@@ -17,7 +17,7 @@
   "lr": 1.2e-5,
   "end_lr": 1.2e-6,
   "weight_decay": 0.1,
-  "total_steps": 54,
+  "total_steps": 95,
 
   "tpu_size": 8,
 
@@ -32,10 +32,10 @@
   "eval_harness_tasks": [
   ],
 
-  "val_batches": 1722,
-  "val_every": 500,
+  "val_batches": 217,
+  "val_every": 250,
   "ckpt_every": 500,
-  "keep_every": 1500,
+  "keep_every": 1000,
 
   "name": "1st_run",
   "wandb_project": "large_housefile_content_emails-subjectlines",
